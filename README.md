@@ -36,10 +36,8 @@
 
 - GitHub: [@Am1nch1k](https://github.com/Am1nch1k)
 
---- Telegram :[@den1ssed](https://web.telegram.org/k/#@den1ssed)
+- Telegram :[@den1ssed](https://web.telegram.org/k/#@den1ssed)
 
 ## 📜 Лицензия (License)
 
 Этот проект распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE).
-
-```
