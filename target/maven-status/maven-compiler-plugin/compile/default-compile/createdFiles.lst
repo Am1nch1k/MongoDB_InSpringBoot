@@ -1,0 +1,6 @@
+com/mongoDB/demo/repository/UserRepository.class
+com/mongoDB/demo/Controller/MainController.class
+com/mongoDB/demo/service/UserService.class
+com/mongoDB/demo/entity/User.class
+com/mongoDB/demo/Configuration/MongoDBConfiguration.class
+com/mongoDB/demo/MongoDB_Application.class
