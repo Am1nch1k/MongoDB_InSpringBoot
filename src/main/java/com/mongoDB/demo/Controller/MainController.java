@@ -2,7 +2,6 @@ package com.mongoDB.demo.Controller;
 
 import com.mongoDB.demo.entity.User;
 import com.mongoDB.demo.repository.UserRepository;
-import com.mongoDB.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 public class MainController {
+
     @Autowired
     private UserRepository userRepository;
 
@@ -28,5 +28,11 @@ public class MainController {
     @PostMapping("/create")
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
+    }
+
+    @GetMapping("/mail")
+    public String getUserByMail(@RequestParam String studentMail) {
+        Optional<User> user = userRepository.findByEmail(studentMail);
+        return user.isPresent() ? user.get().getId() : "User not found with email: " + studentMail;
     }
 }

@@ -9,10 +9,11 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Document(collection = "students")
 public class User {
 
-    public User(String studentName, int studentAge) {
+    public User(String studentName, int studentAge, String studentMail) {
         this.studentName = studentName;
         this.studentAge = studentAge;
     }
@@ -25,10 +26,7 @@ public class User {
     @Field("student_age")
     private Integer studentAge;
 
-    @Override
-    public String toString() {
-        return String.format(
-                "Student[id=%s, studentName='%s'," + "studentAge="+studentAge+"]",
-                id, studentName, studentAge);
-    }
+    @Field("student_mail")
+    private String email;
+
 }
