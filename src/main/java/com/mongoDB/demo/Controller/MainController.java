@@ -35,4 +35,14 @@ public class MainController {
         Optional<User> user = userRepository.findByEmail(studentMail);
         return user.isPresent() ? user.get().getId() : "User not found with email: " + studentMail;
     }
+
+    @PutMapping("/update")
+    public User updateUser(@RequestBody User user) {
+        return userRepository.save(user);
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteUser(@RequestParam String id) {
+        userRepository.deleteById(id);
+    }
 }
